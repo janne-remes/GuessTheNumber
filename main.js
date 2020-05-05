@@ -10,9 +10,12 @@ function usersGuess(){
         
         howManyGuesses++;
 
-        document.getElementById("messages").innerHTML = "Arvasit luvun oikein! " +
-        "Käytit " + howManyGuesses + " arvauskertaa.";
-        
+        document.getElementById("messages").innerHTML = "Arvasit luvun " + secretNumber +
+        " oikein! Arvauskertoja: " + howManyGuesses;
+
+        document.getElementById("guessButton").disabled = true;
+        document.getElementById("guessField").disabled = true;
+
         guessedNumbersArray.push(guessedNumber);
     }
 
@@ -45,6 +48,8 @@ function usersGuess(){
 
         guessedNumbersArray.push(guessedNumber);
     }
+
+    document.getElementById("guessField").value = "";
 
     document.getElementById("wrongGuesses").innerHTML = guessedNumbersArray;
 }
