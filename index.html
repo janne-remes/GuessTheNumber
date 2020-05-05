@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess The Number</title>
-
+</head>
+<body onload="start()">
     <h1>Arvaa luku väliltä 1 - 100</h1>
 
     <label for="arvaus">Arvaus:</label>
-    <input type="text" id="arvattuLuku" name="arvaus">
+    <input type="text" id="guessField" name="arvaus">
+    <button id="guessButton">Arvaa</button>
 
-</head>
-<body>
-    
+    <p id="messages"></p>
+
+    <h2>Arvatut luvut:</h2>
+    <p id="wrongGuesses"></p>
+
+    <script src="main.js"></script>
 </body>
 </html>
