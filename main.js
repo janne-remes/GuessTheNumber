@@ -11,7 +11,7 @@ function usersGuess(){
         howManyGuesses++;
 
         document.getElementById("messages").innerHTML = "Arvasit luvun " + secretNumber +
-        " oikein! Arvauskertoja: " + howManyGuesses;
+        " oikein! Hyväksyttyjä arvauskertoja: " + howManyGuesses;
 
         document.getElementById("guessButton").disabled = true;
         document.getElementById("guessField").disabled = true;
@@ -27,6 +27,13 @@ function usersGuess(){
     else if (guessedNumber < 1 || guessedNumber > 100){
         
         document.getElementById("messages").innerHTML = "Anna luku väliltä 1 - 100.";
+    }
+
+    else if (guessedNumbersArray.includes(guessedNumber)){
+
+        document.getElementById("messages").innerHTML = "Olet jo arvannut luvun "
+        + guessedNumber + ".";
+        
     }
 
     else if (secretNumber > guessedNumber){
